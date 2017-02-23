@@ -1,0 +1,5 @@
+<%- include ../public/header %>
+<% tags.forEach(function(tag, index){ if(tag){%>
+<span class="label label-info"><a class="tag" href="/tags/<%= tag %>"><%= tag %></a></span>
+<% }}) %>
+<%- include ../public/footer %>

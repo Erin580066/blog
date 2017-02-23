@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title><%= title %></title>
+    <link rel="stylesheet" href="/lib/bootstrap/dist/css/bootstrap.min.css"/>
+    <!--<link rel='stylesheet' href='/stylesheets/style.css'/>-->
+    <link rel='stylesheet' href='/stylesheets/blog.css'/>
+</head>
+<body>
+<div class="main-body">
+    <img style="position: fixed;top: 0;left: 0;z-index: -1;width: 100%;height: 100%;" class="" src="/images/body.jpg"
+         alt="背景"/>
+
+    <!--NAV-->
+    <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+        <div class="container">
+            <div class="navbar-header">
+                <a class="navbar-brand pull-left" href="/">博客</a>
+                <span class="pull-left">
+                    <form action="/search" method="get">
+                        <input class="search form-control" type="text" name="keyword" placeholder="SEARCH"/>
+                    </form>
+                </span>
+            </div>
+            <div class="pull-right">
+                <ul class="nav navbar-nav">
+                    <% if(user){ %>
+                    <li><a class="" href="/logout">logout</a></li>
+                    <% }else{ %>
+                    <li><a class="" href="/login">login</a></li>
+                    <li><a class="" href="/reg">register</a></li>
+                    <% } %>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!--PAGE-->
+    <div class="container">
+
+        <!--USER-->
+        <div class="col-sm-12">
+            <div class="user-box">
+                <div class="user">
+                    <span><img src="" alt=""/></span>
+
+                    <h3>姚力晓的博客</h3>
+
+                    <div class="resume">
+                        <a href="#">简历</a> |
+                        <a href="#">下载PDF简历</a>
+                    </div>
+
+                    <p>一名前端工程师、目前研究node、React、webpack. </p>
+                </div>
+            </div>
+            <!--<div class="text-center">
+                <a href="javascript:;">我的主页</a>
+                <a href="javascript:;">我的作品</a>
+            </div>-->
+        </div>
+
+        <div class="col-sm-12">
+            <% if(success){ %>
+            <div class="alert alert-success"><%= success %></div>
+            <% } %>
+            <% if(error){ %>
+            <div class="alert alert-danger"><%= error %></div>
+            <% } %>
+        </div>
+
+        <!--LIST-->
+        <nav class="box col-sm-3">
+            <div class="list-group">
+                <a class="list-group-item active" href="/">home</a>
+                <a class="list-group-item" href="/archive">archive</a>
+                <a class="list-group-item" href="/tags">tags</a>
+                <a class="list-group-item" href="/links">links</a>
+
+                <% if(user){ %>
+                <a class="list-group-item" href="/upload">upload</a>
+                <a class="list-group-item" href="/post">post</a>
+                <% } %>
+            </div>
+        </nav>
+
+        <!--CONTENT-->
+        <div class="col-sm-9">
+            <div class="box well">
+                <header class="header">
+                    <h3><%= title %></h3>
+                </header>
+                <article class="">

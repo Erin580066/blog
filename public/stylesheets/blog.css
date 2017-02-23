@@ -1,0 +1,93 @@
+ul,li{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+.main-body{
+    width: 100%;
+    position: relative;
+    padding-top: 65px;
+}
+.box{
+    margin-top: 15px;
+}
+.box-R{
+    /*background: #ffffff;*/
+}
+.tag{
+    color: #ffffff;
+}
+.user-box{
+    height: 220px;
+    background: url("../images/javascript.jpg") no-repeat;
+    -webkit-background-size: 100% 100%;
+    background-size: 100% 100%;;
+}
+.user-box .user{
+    padding: 55px 0 0 175px;
+    position: relative;
+}
+.user-box .user span{
+    position: absolute;
+    top: 55px;
+    left: 50px;
+    z-index: 1;
+    width: 110px;
+    height: 110px;
+    border-radius: 100px;
+    background: #cccccc;
+}
+.user-box .user .resume{
+    color: #cccccc;
+}
+.user-box .user h3{
+    font-size: 36px;
+    color: #ffffff;
+    font-weight: bold;
+    margin: 10px 0;
+}
+.user-box .user p{
+    margin-top: 5px;
+    font-size: 16px;
+    color: #ccc;
+}
+.info span{
+    color: #999;
+}
+.post{
+    color: #666;
+    font-size: 16px;
+}
+
+
+/*****************bootstrap重置*******************/
+.h1, .h2, .h3, h1, h2, h3{
+    margin: 0;
+}
+.well{
+    background: #ffffff;
+}
+.well li{
+    line-height: 40px;
+    padding: 0 20px;
+}
+.well li:hover{
+    background: #f9f9f9;
+}
+.well li a{
+    font-size: 16px;
+}
+.well li span{
+    float: right;
+}
+.well .header{
+    padding-bottom: 10px;
+    margin-bottom: 15px;
+    border-bottom: 1px solid #cccccc;
+}
+.navbar-default .navbar-header .navbar-brand{
+    margin: 0;
+}
+.navbar-default .navbar-header span{
+    margin-top: 8px;
+}
